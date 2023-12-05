@@ -38,7 +38,7 @@ SELECT nome, preco FROM tb_produtos;
 -- É possível usar WHERE para filtrar os resultados
 SELECT * FROM tb_produtos WHERE id = 1;
 
-- Visualiza somente o nome e o preço
+-- Visualiza somente o nome e o preço
 SELECT nome, preco FROM tb_produtos;
 
 -- Visualiza somente o nome e o preço formatado para Reais
