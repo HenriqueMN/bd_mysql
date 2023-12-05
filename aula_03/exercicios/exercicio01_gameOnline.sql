@@ -51,12 +51,14 @@ SELECT * FROM tb_personagens WHERE defesa BETWEEN 1000 AND 2000;
 SELECT * FROM tb_personagens WHERE nome LIKE "%C%"; -- Não é case sensitive
 
 -- Faça um SELECT utilizando a cláusula INNER JOIN, unindo os dados da tabela tb_personagens com os dados da tabela tb_classes.
-SELECT * FROM tb_personagens
+SELECT nome, tb_classes.classe AS classe, ataque, defesa
+FROM tb_personagens
 INNER JOIN tb_classes
 ON tb_personagens.classe = tb_classes.id;
 
 -- Faça um SELECT utilizando a cláusula INNER JOIN, unindo os dados da tabela tb_personagens com os dados da tabela tb_classes, onde traga apenas os personagens que pertençam a uma classe específica (Exemplo: Todes os personagens da classe dos arqueiros).
-SELECT * FROM tb_personagens
+SELECT nome, tb_classes.classe AS classe, ataque, defesa
+FROM tb_personagens
 INNER JOIN tb_classes
 ON tb_personagens.classe = tb_classes.id
 WHERE tb_classes.classe = "atirador";
